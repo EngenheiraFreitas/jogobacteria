@@ -62,8 +62,9 @@ function draw() {
       drawredBubble();
     }
 
-    if(keyDown("space")){
+    if(touches.length>0 || keyDown("space")){
       shootBullet();
+      touches = [];
     }
 
     if (blueBubbleGroup.collide(backBoard)){
